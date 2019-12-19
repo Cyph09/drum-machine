@@ -3,9 +3,10 @@ import React from "react";
 const ControlsPane = props => (
   <>
     <div id="display">
-      <div>{props.display}</div>
+      <div className="display-text">{props.display}</div>
     </div>
-    <div id="volumeSlider">
+    <div className="volume-slider">
+      <i className="material-icons">volume_mute</i>
       <input
         type="range"
         onChange={props.changeVolume}
@@ -15,6 +16,7 @@ const ControlsPane = props => (
         value={props.volume}
         className="slider"
       />
+      <i className="material-icons md-18">volume_up</i>
     </div>
   </>
 );

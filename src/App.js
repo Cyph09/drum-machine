@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { display: "0", audioVolume: 0.5 };
+    this.state = { display: "", audioVolume: 50 };
     this.updateDisplay = this.updateDisplay.bind(this);
     this.adjustVolume = this.adjustVolume.bind(this);
   }
@@ -24,7 +24,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div id="drum-machine" className="App">
+      <div id="drum-machine" className="container">
         <ControlsPane
           display={this.state.display}
           volume={this.state.audioVolume}

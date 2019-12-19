@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 
+const activeBtn = {
+  backgroundColor: "#e65100",
+  backgroundSize: "100%",
+  transition: "background 0s"
+};
 class DrumPad extends Component {
   constructor(props) {
     super(props);

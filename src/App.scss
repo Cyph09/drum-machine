@@ -1,4 +1,76 @@
-.App {
-  display: grid;
+$color-dark: #263238;
+$color-darker: #071016;
+$color-light: #eceff1;
+$color-lighter: #ffffff;
+$color-accent: #e65100;
+$color-border: #2f3d44;
 
+.container {
+  display: grid;
+  border: 2px solid $color-border;
+  border-radius: 5px;
+  background: $color-dark;
+  margin: 2rem auto;
+  width: 350px;
+  height: 60vh;
+  max-height: 700px;
+  font-size: 1.4rem;
+  text-align: center;
+
+  #display {
+    display: grid;
+    width: calc(100%-0.3rem);
+    height: calc(90%-0.3rem);
+    background: $color-darker;
+    border: 2px solid $color-border;
+    border-radius: 4px;
+    padding: 0.3rem;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    align-items: center;
+    color: $color-accent;
+
+    // .display-text {
+    //   align-self: center;
+    //   color: $color-accent;
+    // }
+  }
+
+  .volume-slider {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    font-size: 0.625rem;
+    margin: 0 1rem;
+
+  }
+
+  .pads-pane {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.05rem;
+    margin: 0 0.4rem;
+
+    .drum-pad {
+      display: flex;
+      height: 70%;
+      background: $color-darker;
+      background-position: center;
+      transition: background 0.8s;
+      box-shadow: 0 0 2px #807f7f;
+      border-radius: 4px;
+      padding: 0.4rem 0.8rem;
+      margin: 0 0.2rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:active {
+        background-color: $color-accent;
+        background-size: 100%;
+        transition: background 0s;
+      }
+    }
+  }
 }

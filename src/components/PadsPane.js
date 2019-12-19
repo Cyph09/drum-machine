@@ -70,7 +70,7 @@ const PadsPane = ({ updateDisplay, volume }) => {
       volume={volume}
     />
   ));
-  return <div className="padsPane">{drumPad}</div>;
+  return <div className="pads-pane">{drumPad}</div>;
 };
 
 export default PadsPane;
