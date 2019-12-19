@@ -27,7 +27,7 @@ class DrumPad extends Component {
 
   playSound() {
     // TODO: Add power options leter
-    const sound = document.getElementById(this.props.keyCode);
+    const sound = document.getElementById(this.props.keyName);
     sound.currentTime = 0;
     sound.play();
     sound.volume = this.props.volume / 100;
@@ -46,8 +46,8 @@ class DrumPad extends Component {
           onClick={this.playSound}
         >
           <audio
-            id={this.props.keyCode}
-            className="sound"
+            id={this.props.keyName}
+            className="clip"
             src={this.props.soundUrl}
           ></audio>
           {this.props.keyName}
